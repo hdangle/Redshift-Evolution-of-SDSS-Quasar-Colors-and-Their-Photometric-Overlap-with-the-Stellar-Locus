@@ -11,11 +11,12 @@ At the primary grid resolution, the retained quasar fraction in (u−g) vs. (r�
 ## Repository Structure
 
 ```text
-├── Notebooks/    Analysis pipeline (run in numbered order)
-├── SQL/          CasJobs queries for the stellar catalog
-├── Data/         Raw FITS files (not tracked — see Data/README.md)
-├── Outputs/      CSV/NPZ intermediate and final results
-└── Figures/      Generated figures
+├── Data/               Raw FITS files (not tracked — see Data/README.md)
+├── Figures/            Generated figures
+├── Notebooks/          Analysis pipeline (run in numbered order)
+├── README_assets/      README images
+├── Outputs/            CSV/NPZ intermediate and final results
+└── SQL/                CasJobs queries for the stellar catalog
 ```
 
 ## Setup
