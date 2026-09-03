@@ -5,4 +5,5 @@ authors:
     given-names: "Hai Dang"
 repository-code: "https://github.com/hdangle/Redshift-Evolution-of-SDSS-Quasar-Colors-and-Their-Photometric-Overlap-with-the-Stellar-Locus"
 date-released: 2026-09-03
+DOI: 10.5281/zenodo.22282334
 license: MIT
