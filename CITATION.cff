@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "Redshift Evolution of SDSS Quasar Colors and Their Photometric Overlap with the Stellar Locus"
+authors:
+  - family-names: "Le"
+    given-names: "Hai Dang"
+repository-code: "https://github.com/hdangle/Redshift-Evolution-of-SDSS-Quasar-Colors-and-Their-Photometric-Overlap-with-the-Stellar-Locus"
+date-released: 2026-09-03
+license: MIT
