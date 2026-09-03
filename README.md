@@ -2,7 +2,7 @@
 
 Analysis of ~163,000 SDSS DR16Q quasars and ~1.9 million SDSS stars, quantifying how quasar–star color overlap changes with redshift. Using a grid-based retention metric with binomial and bootstrap uncertainty estimates, the analysis recovers the known z ≈ 2.7 quasar–star color degeneracy and shows it is most pronounced in color combinations involving u−g.
 
-![Retention fraction](README_assets/Quasar_Retention_Fraction_for_u-g_vs_r-i.png)
+![Retention fraction](README_assets/Quasar Retention Fraction for u-g vs r-i.png)
 
 ## Key Result
 
