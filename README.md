@@ -56,7 +56,7 @@ This project makes use of data from the Sloan Digital Sky Survey (SDSS) and the 
 
 ## Citation
 
-If you use this code, please cite the [Zenodo record](https://doi.org/10.5281/zenodo.22283119).
+If you use this code, please cite the [Zenodo record](https://doi.org/10.5281/zenodo.23139003).
 
 ## License
 
