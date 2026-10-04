@@ -1,12 +1,12 @@
 # Redshift Evolution of SDSS Quasar Colors and Their Photometric Overlap with the Stellar Locus
 
-Analysis of 162,877 quality-selected SDSS DR16Q quasars and 1,854,084 SDSS point sources classified photometrically as `STAR` (with spectroscopically confirmed quasars removed). We trace the redshift evolution of (u−g), (g−r), (r−i), and (i−z), and measure the fraction of quasars whose colors lie outside a stellar-density mask in four color–color projections, testing its sensitivity to grid resolution and density threshold.
+Analysis of 162,877 quality-selected SDSS DR16Q quasars and 1,854,084 SDSS point sources classified photometrically as `STAR` (with spectroscopically confirmed quasars removed). We trace the redshift evolution of (u-g), (g-r), (r-i), and (i-z), and measure the fraction of quasars whose colors lie outside a stellar-density mask in four color–color projections, testing its sensitivity to grid resolution and density threshold.
 
-![Unmasked fraction in (u−g) vs (r−i)](Figures/Unmasked%20DR16Q%20Sample%20Fraction%20for%20u-g%20vs%20r-i.png)
+![Unmasked fraction in (u-g) vs (r-i)](Figures/Unmasked%20DR16Q%20Sample%20Fraction%20for%20u-g%20vs%20r-i.png)
 
 ## Key Result
 
-Projections containing (u−g) generally show less overlap with the stellar locus than redder-only projections. In (u−g) vs (r−i), the unmasked fraction falls from 0.88–1.00 at z ≤ 2.5 to 0.57 at 2.5 < z ≤ 3 (grid n = 200, threshold T = 250), the redshift range where quasar colors are known to resemble those of A/F stars. Absolute values depend strongly on grid resolution and threshold.
+Projections containing (u-g) generally show less overlap with the stellar locus than redder-only projections. In (u-g) vs (r-i), the unmasked fraction falls from 0.88-1.00 at z ≤ 2.5 to 0.57 at 2.5 < z ≤ 3 (grid n = 200, threshold T = 250), the redshift range where quasar colors are known to resemble those of A/F stars. Absolute values depend strongly on grid resolution and threshold.
 
 The unmasked fraction is a descriptive overlap statistic for this DR16Q sample. It is **not** a measure of survey completeness, purity, or selection efficiency.
 
@@ -34,7 +34,7 @@ Place both files in `Data/`. Notebooks 02–04 can be run directly from the file
 ## Running the Pipeline
 
 1. `01_Data_Selection.ipynb`: sample selection and quality cuts
-2. `02_Color_Evolution.ipynb`: color–redshift statistics
+2. `02_Color_Evolution.ipynb`: color-redshift statistics
 3. `03_Stellar_Locus_and_Retention.ipynb`: stellar-density grids and unmasked fraction with binomial uncertainty
 4. `04_Uncertainty_Analysis_and_Robustness_Test.ipynb`: grid/threshold sensitivity and bootstrap
 
