@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "Redshift Evolution of SDSS Quasar Colors and Their Photometric Overlap with the Stellar Locus"
-version: "2.0.0"
+version: "2.0.1"
 authors:
   - family-names: "Le"
     given-names: "Hai Dang"
