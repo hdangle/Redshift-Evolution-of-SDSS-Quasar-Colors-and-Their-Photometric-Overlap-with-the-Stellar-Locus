@@ -29,7 +29,7 @@ Raw FITS files are not tracked. To reproduce from scratch:
 - DR16Q v4: [SDSS DR16Q](https://www.sdss4.org/dr17/algorithms/qso_catalog/)
 - Stellar catalog: run `SQL/Star_Catalog_Query.sql` in SDSS CasJobs (DR16 context).
 
-Place both files in `Data/`. Notebooks 02–04 can be run directly from the files in `Outputs/` without downloading the raw data.
+Place both files in `Data/`. Notebooks 02-04 can be run directly from the files in `Outputs/` without downloading the raw data.
 
 ## Running the Pipeline
 
