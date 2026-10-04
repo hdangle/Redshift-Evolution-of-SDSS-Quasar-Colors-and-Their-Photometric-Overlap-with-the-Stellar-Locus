@@ -41,6 +41,7 @@ Place both files in `Data/`. Notebooks 02–04 can be run directly from the file
 ## Authors
 
 Le Hai Dang
+
 Hua Thanh Duy
 
 ## Contact
