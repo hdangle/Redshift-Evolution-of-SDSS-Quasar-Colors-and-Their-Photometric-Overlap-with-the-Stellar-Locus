@@ -1,0 +1,8 @@
+step,description,rejected,remaining
+0,objects_in_selected_sky_cells,null,46168062
+1,sdss_photometric_star_classification,27597377,18570685
+2,clean_photometry,7242800,11327885
+3,photometric_uncertainty_below_0.1,9421805,1906080
+4,valid_psf_magnitudes,0,1906080
+5,exclude_spectroscopic_quasars,50125,1855955
+6,final_photometric_stellar_sample,null,1855955

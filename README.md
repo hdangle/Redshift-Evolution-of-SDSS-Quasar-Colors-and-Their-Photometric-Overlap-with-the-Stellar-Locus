@@ -1,51 +1,46 @@
 # Redshift Evolution of SDSS Quasar Colors and Their Photometric Overlap with the Stellar Locus
 
-Analysis of ~163,000 SDSS DR16Q quasars and ~1.9 million SDSS stars, quantifying how quasar–star color overlap changes with redshift. Using a grid-based retention metric with binomial and bootstrap uncertainty estimates, the analysis recovers the known z ≈ 2.7 quasar–star color degeneracy and shows it is most pronounced in color combinations involving u−g.
+Analysis of 162,877 quality-selected SDSS DR16Q quasars and 1,854,084 SDSS point sources classified photometrically as `STAR` (with spectroscopically confirmed quasars removed). We trace the redshift evolution of (u−g), (g−r), (r−i), and (i−z), and measure the fraction of quasars whose colors lie outside a stellar-density mask in four color–color projections, testing its sensitivity to grid resolution and density threshold.
 
-![Retention fraction](README_assets/Quasar_Retention_Fraction_for_u-g_vs_r-i.png)
+![Unmasked fraction in (u−g) vs (r−i)](Figures/Unmasked%20DR16Q%20Sample%20Fraction%20for%20u-g%20vs%20r-i.png)
 
 ## Key Result
 
-At the primary grid resolution, the retained quasar fraction in (u−g) vs. (r−i) falls to ~0.54 at 2.5 < z ≤ 3.0, consistent with the well-known similarity between quasar colors and early F/late A stars near this redshift.
+Projections containing (u−g) generally show less overlap with the stellar locus than redder-only projections. In (u−g) vs (r−i), the unmasked fraction falls from 0.88–1.00 at z ≤ 2.5 to 0.57 at 2.5 < z ≤ 3 (grid n = 200, threshold T = 250), the redshift range where quasar colors are known to resemble those of A/F stars. Absolute values depend strongly on grid resolution and threshold.
+
+The unmasked fraction is a descriptive overlap statistic for this DR16Q sample. It is **not** a measure of survey completeness, purity, or selection efficiency.
 
 ## Repository Structure
 
-```text
-├── Data/               Raw FITS files (not tracked — see Data/README.md)
-├── Figures/            Generated figures
-├── Notebooks/          Analysis pipeline (run in numbered order)
-├── README_assets/      README images
-├── Outputs/            CSV/NPZ intermediate and final results
-└── SQL/                CasJobs queries for the stellar catalog
-```
+    ├── Data/        Raw FITS files (not tracked; see Data/README.md)
+    ├── Figures/     Generated figures
+    ├── Notebooks/   Analysis pipeline (run in numbered order)
+    ├── Outputs/     CSV/NPZ intermediate and final results
+    └── SQL/         CasJobs queries for the stellar catalog and its selection funnel
 
 ## Setup
-
-Install the required Python packages with:
 
     pip install -r requirements.txt
 
 ## Data
 
-Raw FITS files are not tracked in this repository. Download:
+Raw FITS files are not tracked. To reproduce from scratch:
 
-- DR16Q v4: [SDSS DR16Q v4](https://www.sdss4.org/dr17/algorithms/qso_catalog/)
-- Stellar catalog: run `SQL/star_catalog_query.sql` via SDSS CasJobs.
+- DR16Q v4: [SDSS DR16Q](https://www.sdss4.org/dr17/algorithms/qso_catalog/)
+- Stellar catalog: run `SQL/Star_Catalog_Query.sql` in SDSS CasJobs (DR16 context).
 
-Place both files in `Data/` before running the notebooks.
+Place both files in `Data/`. Notebooks 02–04 can be run directly from the files in `Outputs/` without downloading the raw data.
 
 ## Running the Pipeline
 
-Run the notebooks in order:
-
-1. `01_Data_Selection.ipynb` - sample selection and quality cuts
-2. `02_Color_Evolution.ipynb` - color–redshift statistics
-3. `03_Stellar_Locus_and_Retention.ipynb` - grid construction and retention fraction
-4. `04_Selection_Efficiency_and_Robustness_Test.ipynb` - sensitivity and bootstrap testing
+1. `01_Data_Selection.ipynb`: sample selection and quality cuts
+2. `02_Color_Evolution.ipynb`: color–redshift statistics
+3. `03_Stellar_Locus_and_Retention.ipynb`: stellar-density grids and unmasked fraction with binomial uncertainty
+4. `04_Uncertainty_Analysis_and_Robustness_Test.ipynb`: grid/threshold sensitivity and bootstrap
 
 ## Authors
 
-Le Hai Dang  
+Le Hai Dang
 Hua Thanh Duy
 
 ## Contact
@@ -56,11 +51,11 @@ For questions regarding the analysis or repository, contact danglepvt@gmail.com.
 
 We thank the Haus der Astronomie and the Max Planck Institute for Astronomy for the opportunity to undertake this research through the International Summer Internship. We also thank Niall Deacon for his guidance, feedback, and valuable discussions.
 
-This project makes use of data from the Sloan Digital Sky Survey (SDSS) and the following Python packages: Astropy, NumPy, pandas, and Matplotlib.
+This project makes use of data from the Sloan Digital Sky Survey (SDSS) and the Python packages Astropy, NumPy, pandas, and Matplotlib.
 
 ## Citation
 
-If you use this code, please cite the [Zenodo record](https://doi.org/10.5281/zenodo.22282334).
+If you use this code, please cite the [Zenodo record](https://doi.org/10.5281/zenodo.22283115).
 
 ## License
 

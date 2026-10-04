@@ -30,9 +30,28 @@ WITH step_counts AS (
             AND p.psfMag_r > -100 AND p.psfMag_r < 100
             AND p.psfMag_i > -100 AND p.psfMag_i < 100
             AND p.psfMag_z > -100 AND p.psfMag_z < 100
-            THEN 1 END) AS n_after_valid_mags
+            THEN 1 END) AS n_after_valid_mags,
+
+        COUNT(CASE WHEN p.type = 6
+            AND p.clean = 1
+            AND p.psfMagErr_u >= 0 AND p.psfMagErr_u < 0.1
+            AND p.psfMagErr_g >= 0 AND p.psfMagErr_g < 0.1
+            AND p.psfMagErr_r >= 0 AND p.psfMagErr_r < 0.1
+            AND p.psfMagErr_i >= 0 AND p.psfMagErr_i < 0.1
+            AND p.psfMagErr_z >= 0 AND p.psfMagErr_z < 0.1
+            AND p.psfMag_u > -100 AND p.psfMag_u < 100
+            AND p.psfMag_g > -100 AND p.psfMag_g < 100
+            AND p.psfMag_r > -100 AND p.psfMag_r < 100
+            AND p.psfMag_i > -100 AND p.psfMag_i < 100
+            AND p.psfMag_z > -100 AND p.psfMag_z < 100
+            AND q.bestObjID IS NULL
+            THEN 1 END) AS n_after_no_qso
 
     FROM PhotoPrimary AS p
+    LEFT JOIN (SELECT DISTINCT bestObjID
+               FROM SpecObj
+               WHERE class = 'QSO') AS q
+           ON q.bestObjID = p.objID
     WHERE
     (
            (p.dec >= -10 AND p.dec < 0
@@ -93,8 +112,13 @@ SELECT 4, 'valid_psf_magnitudes',
 FROM step_counts
 
 UNION ALL
-SELECT 5, 'final_photometric_stellar_sample',
-       CAST(NULL AS INT), n_after_valid_mags
+SELECT 5, 'exclude_spectroscopic_quasars',
+       n_after_valid_mags - n_after_no_qso, n_after_no_qso
+FROM step_counts
+
+UNION ALL
+SELECT 6, 'final_photometric_stellar_sample',
+       CAST(NULL AS INT), n_after_no_qso
 FROM step_counts
 
 ORDER BY step;

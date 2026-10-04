@@ -1,26 +1,12 @@
 SELECT
-    p.objID,
-    p.ra,
-    p.dec,
-    p.type,
-    p.clean,
-    p.psfMag_u,
-    p.psfMag_g,
-    p.psfMag_r,
-    p.psfMag_i,
-    p.psfMag_z,
-    p.psfMagErr_u,
-    p.psfMagErr_g,
-    p.psfMagErr_r,
-    p.psfMagErr_i,
-    p.psfMagErr_z,
-    p.extinction_u,
-    p.extinction_g,
-    p.extinction_r,
-    p.extinction_i,
-    p.extinction_z
+    p.objID, p.ra, p.dec, p.type, p.clean,
+    p.psfMag_u, p.psfMag_g, p.psfMag_r, p.psfMag_i, p.psfMag_z,
+    p.psfMagErr_u, p.psfMagErr_g, p.psfMagErr_r, p.psfMagErr_i, p.psfMagErr_z,
+    p.extinction_u, p.extinction_g, p.extinction_r, p.extinction_i, p.extinction_z
 INTO MyDB.Star_Catalog
 FROM PhotoPrimary AS p
+LEFT JOIN SpecObj AS s
+       ON s.bestObjID = p.objID AND s.class = 'QSO'
 WHERE
 (
        (p.dec >= -10 AND p.dec < 0
@@ -64,4 +50,5 @@ AND p.psfMag_u > -100 AND p.psfMag_u < 100
 AND p.psfMag_g > -100 AND p.psfMag_g < 100
 AND p.psfMag_r > -100 AND p.psfMag_r < 100
 AND p.psfMag_i > -100 AND p.psfMag_i < 100
-AND p.psfMag_z > -100 AND p.psfMag_z < 100;
+AND p.psfMag_z > -100 AND p.psfMag_z < 100
+AND s.specObjID IS NULL

@@ -186,9 +186,6 @@ pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks
 
-# Raw / downloaded data
-Data/
-
-# Generated outputs
-Outputs/
-Figures/
+# Raw / downloaded data (too large for GitHub; see Data/README.md)
+Data/*
+!Data/README.md
