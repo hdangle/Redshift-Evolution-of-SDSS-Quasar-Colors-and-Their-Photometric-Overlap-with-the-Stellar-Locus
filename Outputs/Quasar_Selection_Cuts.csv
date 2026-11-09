@@ -3,5 +3,6 @@ step,description,rejected,remaining
 1,valid_quasar_classification_and_redshift,1759.0,748655
 2,good_spectrum_zwarning,111268.0,637387
 3,exclude_suspect_pipeline_redshifts,158.0,637229
-4,photometric_uncertainty_below_0.1,474352.0,162877
-5,valid_psf_magnitudes,0.0,162877
+4,consistent_pipeline_and_quasarnet_redshifts,3707.0,633522
+5,photometric_uncertainty_below_0.1,471418.0,162104
+6,valid_psf_magnitudes,0.0,162104
