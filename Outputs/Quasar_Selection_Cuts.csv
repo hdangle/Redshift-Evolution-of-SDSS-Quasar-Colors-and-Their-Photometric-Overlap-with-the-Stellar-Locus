@@ -1,8 +1,8 @@
 step,description,rejected,remaining
 0,total_quasars_in_catalog,,750414
 1,valid_quasar_classification_and_redshift,1759.0,748655
-2,good_spectrum_zwarning,111268.0,637387
-3,exclude_suspect_pipeline_redshifts,158.0,637229
+2,no_pipeline_or_pca_redshift_warning,111268.0,637387
+3,exclude_pipeline_only_redshifts_above_z5,158.0,637229
 4,consistent_pipeline_and_quasarnet_redshifts,3707.0,633522
 5,photometric_uncertainty_below_0.1,471418.0,162104
-6,valid_psf_magnitudes,0.0,162104
+6,valid_extinction_corrected_psf_magnitudes,0.0,162104

@@ -35,7 +35,7 @@ Place both files in `Data/`. Notebooks 02-04 can be run directly from the files 
 
 1. `01_Data_Selection.ipynb`: sample selection and quality cuts (including removal of quasars whose pipeline and QuasarNET redshifts disagree by more than 10,000 km/s)
 2. `02_Color_Evolution.ipynb`: color–redshift statistics
-3. `03_Stellar_Locus_and_Retention.ipynb`: stellar-density grids and unmasked fraction with binomial uncertainty
+3. `03_Stellar_Mask_and_Unmasked_Fraction.ipynb`: stellar-count grids and unmasked fraction with binomial uncertainty
 4. `04_Uncertainty_Analysis_and_Robustness_Test.ipynb`: grid/threshold sensitivity and bootstrap
 
 ## Authors

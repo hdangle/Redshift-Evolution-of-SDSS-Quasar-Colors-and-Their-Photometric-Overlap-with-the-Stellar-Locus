@@ -1,4 +1,4 @@
-projection,threshold,n_grid,redshift_bin,z_mid,N,N_retained,retained_fraction,sigma_binomial
+projection,threshold,n_grid,redshift_bin,z_mid,N,N_unmasked,unmasked_fraction,sigma_binomial
 r-i vs g-r,5,200,0-0.5,0.25,7290,530,0.07270233196159122,0.003041024998869632
 r-i vs g-r,5,200,0.5-1.0,0.75,31121,965,0.031008001028244594,0.0009825851779708603
 r-i vs g-r,5,200,1.0-1.5,1.25,32685,169,0.005170567538626281,0.0003967063715563866
